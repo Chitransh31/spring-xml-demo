@@ -9,33 +9,33 @@
    http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
-        <property name="name" value="Keanu Reeves"></property>
-        <property name="gender" value="Male"></property>
-        <property name="age" value="40"></property>
+        <constructor-arg index="0" value="Keanu Reeves"/>
+        <constructor-arg index="1" value="Male"/>
+        <constructor-arg index="2" value="40"/>
     </bean>
 
-    <bean id="movie1" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor1"></property>
+    <bean name="movieA" class="com.stackroute.domain.Movie" scope="prototype">
+        <constructor-arg index="0" ref="actor1"/>
     </bean>
 
     <bean id="actor2" class="com.stackroute.domain.Actor">
-        <property name="name" value="Leonardo Di Caprio"></property>
-        <property name="gender" value="Male"></property>
-        <property name="age" value="40"></property>
+        <constructor-arg index="0" value="Leonardo Di Caprio"/>
+        <constructor-arg index="1" value="Male"/>
+        <constructor-arg index="2" value="40"/>
     </bean>
 
-    <bean id="movie2" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor2"></property>
+    <bean name="movieB" class="com.stackroute.domain.Movie">
+        <constructor-arg index="0" ref="actor2"/>
     </bean>
 
     <bean id="actor3" class="com.stackroute.domain.Actor">
-        <property name="name" value="Scarlett Johansson"></property>
-        <property name="gender" value="Female"></property>
-        <property name="age" value="35"></property>
+        <constructor-arg index="0" value="Scarlett Johansson"/>
+        <constructor-arg index="1" value="Female"/>
+        <constructor-arg index="2" value="35"/>
     </bean>
 
-    <bean id="movie3" class="com.stackroute.domain.Movie">
-        <property name="actor" ref="actor3"></property>
+    <bean name="movieC" class="com.stackroute.domain.Movie">
+        <constructor-arg index="0" ref="actor3"/>
     </bean>
 
 </beans>
