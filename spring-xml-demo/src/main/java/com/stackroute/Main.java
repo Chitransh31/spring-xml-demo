@@ -12,10 +12,10 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
         Movie movie1 = (Movie)context.getBean("movieA");
-        System.out.println("Actor details using movie bean: " + movie1.getActor());
+        System.out.println("MovieA bean: " + movie1);
 
         Movie movie2 = (Movie)context.getBean("movieB");
-        System.out.println("Actor details using movie bean: " + movie2.getActor());
+        System.out.println("MovieB bean: " + movie2);
 
         /* Using autowire="byType" with constructor injection results in
             unsatisfied dependency injection
